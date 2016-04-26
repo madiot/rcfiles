@@ -82,3 +82,10 @@ fi
 # Example aliases
 alias zshconfig="${EDITOR} ~/.zshrc"
 alias ohmyzsh="${EDITOR} ~/.oh-my-zsh"
+
+# shortcuts
+alias V="vim"
+alias vimrc="V ~/.vimrc"
+alias j="jobs -l"
+alias P="pushd"
+alias D="dirs -v"
