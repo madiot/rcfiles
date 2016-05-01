@@ -49,7 +49,11 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dnf colored-man-pages colorize extract taskwarrior ant mvn  )
+plugins=(git mercurial dnf colored-man-pages colorize extract taskwarrior ant mvn  )
+# adding OSX' and macports plugins if on OSX
+if [[ -f "~/.portrc" ]] then
+  plugins=($plugins macports osx)
+fi
 
 # User configuration
 
