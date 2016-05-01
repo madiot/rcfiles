@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/pierre/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,12 @@ plugins=(git dnf colored-man-pages colorize extract taskwarrior ant mvn  )
 
 # User configuration
 
-  export PATH="/home/pierre/anaconda3/bin:/apps/jdk/latest/bin:/home/pierre/anaconda3/bin:/apps/jdk/latest/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/pierre/.local/bin:/home/pierre/bin"
+# TODO -- refine the logic to better handle multiple hosts and OSes
+if [[ -d "/Users/pierre/anaconda3" ]] then
+  export PATH="/Users/pierre/anaconda3/bin:/apps/jdk/latest/bin:/Users/pierre/anaconda3/bin:/apps/jdk/latest/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/Users/pierre/.local/bin:/Users/pierre/bin:${PATH}"
+else
+  export PATH="/home/pierre/anaconda3/bin:/apps/jdk/latest/bin:/home/pierre/anaconda3/bin:/apps/jdk/latest/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/pierre/.local/bin:/home/pierre/bin:${PATH}"
+fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
