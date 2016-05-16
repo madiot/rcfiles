@@ -38,9 +38,10 @@ zstyle ':prezto:load' pmodule \
   'screen' \
   'ssh' \
   'macports' \
+  'git' \
   'tmux' \
   'spectrum' \
-  'syntax-highlighter' \
+  'syntax-highlighting' \
   'prompt' 
   
 
