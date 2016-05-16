@@ -22,4 +22,7 @@ alias P="pushd"
 alias D="dirs -v"
 
 # added by Anaconda3 2.4.0 installer
-export PATH="/home/pierre/anaconda3/bin:$PATH"
+export PATH="/home/pierre/anaconda3/bin:${PATH}"
+
+# added apache spark
+export PATH="/opt/spark/spark-1.6.0/bin:${PATH}"
